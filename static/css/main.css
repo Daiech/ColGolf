@@ -104,7 +104,14 @@ a {color: #00aeaa;text-decoration: none;}
 .bb{border-bottom: solid thin #dadada;}
 .bl{border-left: solid thin #dadada;}
 
-header{text-align: center;width: 100%;}
+header{width: 915px;margin: 0 auto;
+    position: absolute;left: 0;right: 0}
+header #logo-header{
+    position: relative;
+    left: -43px;
+    background-image: url("/static/img/landing/logo.png");
+    background-repeat: no-repeat;width: 129px;height: 203px;}
+header #nav-bar{width: 70%;position: absolute;right: 0;top: 0;height: 45px;}
 header h1, header p{display: none;}
 #body-container{min-height: 200px;}
 footer{text-align: center;width: 100%;
@@ -133,7 +140,11 @@ footer p a:hover{text-decoration: underline;}
     margin: 15px auto;
     margin-bottom: 50px;
 }
-
+#search-results{margin:auto;width: 915px;
+    background-image: url("/static/img/landing/results.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    height: 257px;}
 
 
 
