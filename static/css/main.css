@@ -144,7 +144,9 @@ footer p a:hover{text-decoration: underline;}
     margin: 15px auto;
     margin-bottom: 50px;
 }
-#search-results{margin:auto;width: 915px;
+#search-results{
+    margin:auto;width: 915px;
+    margin-top: 10px;
     background-image: url("/static/img/landing/results.png");
     background-repeat: no-repeat;
     background-position: top center;

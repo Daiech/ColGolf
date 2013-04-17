@@ -2,7 +2,66 @@
 {% block TITLE %}Inicio{% endblock %}
 {%block body%}
 <div id="landing-img">
+	<div id="search-box" class="">
+		<div id="frase-home">
+			<img src="{{STATIC_PREFIX}}img/landing/frase-home.png">
+		</div>
+		<form method="post">
+			{% csrf_token %}
+			<input type="text" id="search" placeholder="Zona/Ciudad/Club/Campo de Golf" autofocus>
+		</form>
+		<div id="icons-bar">
+			<img src="{{STATIC_PREFIX}}img/landing/icons-bar.png">
+		</div>
+	</div>
 </div>
-<section id="search-results" class="hidden"></section>
+<section id="search-results" style="display:none"></section>
 <section id="video-news"></section>
+{% endblock%}
+{%block js%}
+<script type="text/javascript">
+	$(document).ready(function () {
+		var i = 0;
+		var cad = "Pereira";
+		$("#search").on("submit", function (e){e.preventDefault();})
+		$("#search").on("keydown", function (e){e.preventDefault();});
+		$("#search").on("keyup", function (e){
+			if (e.keyCode != 13){
+				i++;
+				$("#search").val("").val(cad.substr(0,i));
+			}
+			else{
+				// e.preventDefault();
+				console.log("enter");
+				showResults();
+				return false;
+			}
+		});
+	});
+	function showResults () {
+		$("#search-box").animate(
+			{
+				top: "106px"
+			},
+			function (e){
+
+		});
+		$("#landing-img").animate(
+			{
+				height: "280px"
+			},
+			function (e){
+
+		});
+		$("#search-results").fadeIn(600);
+	}
+</script>
+{% endblock%}
+{%block style%}
+<style type="text/css">
+	#search-box{position: relative;top: 206px;left: 0;right: 0;margin: 0 auto;width: 300px;}
+	#search{border: none; border-radius: 5px; padding: 10px; width: 94%;}
+	#frase-home{width: 240px;margin: 0 auto; margin-bottom: 10px}
+	#icons-bar{width: 235px;margin: 0px auto;}
+</style>
 {% endblock%}
