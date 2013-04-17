@@ -111,7 +111,11 @@ header #logo-header{
     left: -43px;
     background-image: url("/static/img/landing/logo.png");
     background-repeat: no-repeat;width: 129px;height: 203px;}
-header #nav-bar{width: 70%;position: absolute;right: 0;top: 0;height: 45px;}
+header #nav-bar{width: 70%;position: absolute;right: 0;top: 10px;height: 45px;}
+header #nav-bar > div{display: inline;margin-left: 25px;float: right;}
+#follow-buttons{margin-right: 30px;}
+#follow-buttons > div{margin-left: 0;display: inline;}
+#twitter-follow{position: relative;top: 3px;margin-left: 0;}
 header h1, header p{display: none;}
 #body-container{min-height: 200px;}
 footer{text-align: center;width: 100%;

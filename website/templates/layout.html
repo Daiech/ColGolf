@@ -23,11 +23,28 @@
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=435430513214029";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
         <header class="">
             <h1>ColGolf,</h1>
             <p>Gu&iacute; de Golf Colombia</p>
             <div id="logo-header"></div>
-            <div id="nav-bar" class="b"></div>
+            <div id="nav-bar" class="">
+                <div><img src="{{STATIC_PREFIX}}img/landing/redes.png"> </div>
+                <div><img src="{{STATIC_PREFIX}}img/landing/perfil.png"> </div>
+                <div id="follow-buttons">
+                    <div class="fb-like" data-href="http://www.facebook.com/ColGolf" data-send="false" data-layout="button_count" data-width="250" data-show-faces="false"></div>
+                    <div id="twitter-follow">
+                        <a href="https://twitter.com/ColGolf" class="twitter-follow-button" data-show-count="false" data-lang="es">Seguir a @ColGolf</a>
+                    </div>
+                </div>
+            </div>
         </header>
         <div id="body-container" class="">
             {%block body%}
@@ -35,15 +52,16 @@
         </div>
         <footer>
             <div id="footer-container">
-                <p>2013 <a href="http://daiech.com">colgolf.com</a></p>
+                <p><a href="http://daiech.com">colgolf.com</a></p>
                 <p><strong>Gu&iacute;a de Golf Colombia</strong></p>
-                <p>Pereira, Colombia <script>document.write(new Date().getFullYear());</script></p>
+                <p>Desde Pereira, Colombia <script>document.write(new Date().getFullYear());</script></p>
             </div>
         </footer>
         <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
         <script>window.jQuery || document.write('<script src="{{ STATIC_PREFIX }}js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
         <script src="{{ STATIC_PREFIX }}js/plugins.js"></script>
         <script src="{{ STATIC_PREFIX }}js/main.js"></script>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
         {% block js %}{% endblock%}
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
