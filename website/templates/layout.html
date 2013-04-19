@@ -38,12 +38,34 @@
                 <div id="logo-header"></div>
             </a>
             <div id="nav-bar" class="">
-                <a href="#social">
-                    <div><img src="{{STATIC_PREFIX}}img/redes.png"></div>
+                <a href="https://facebook.com/ColGolf" target="_blank">
+                    <div id="facebook" class="redes"></div>
                 </a>
-                <a href="#account">
-                    <div><img src="{{STATIC_PREFIX}}img/perfil.png"></div>
+                <a href="https://twitter.com/ColGolf" target="_blank">
+                    <div class="redes" id="twitter"></div>
                 </a>
+                <!-- <div> -->
+                    <a href="#account">
+                        <div class="account">
+                            <span class="">
+                                {%if user.is_authenticated%}
+                                {{user.username}}
+                                {%else%}
+                                Inicia sesi&oacute;n
+                                {%endif%}
+                            </span>
+                        </div>
+                        <div id="menu-account">
+                            <a href="#close-sing-up">
+                                <div class="btn-close">
+                                </div>
+                            </a>
+                            <a href="/login">
+                                <img src="{{STATIC_PREFIX}}img/menu-account.png">
+                            </a>
+                        </div>
+                    </a>
+                <!-- </div> -->
                 <div id="follow-buttons">
                     <div class="fb-like" data-href="http://www.facebook.com/ColGolf" data-send="false" data-layout="button_count" data-width="250" data-show-faces="false"></div>
                     <div id="twitter-follow">

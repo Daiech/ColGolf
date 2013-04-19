@@ -112,7 +112,7 @@ header{width: 915px;margin: 0 auto;
     background-image: url("/static/img/logo.png");
     background-repeat: no-repeat;width: 129px;height: 203px;}
 header #nav-bar{width: 70%;position: absolute;right: 0;top: 10px;height: 45px;}
-header #nav-bar > a > div{display: inline;margin-left: 25px;float: right;}
+header #nav-bar > a > div{display: inline;float: right;}
 #follow-buttons{margin-right: 30px;float: right;}
 #follow-buttons > div{margin-left: 0;display: inline;}
 #twitter-follow{position: relative;top: 3px;margin-left: 0;}
@@ -128,6 +128,17 @@ footer p{position: relative; top: -40px;color: #9F8962;margin: 0;font-size: 14px
 footer p a{color: #9F8962;font-weight: bold;}
 footer p a:hover{text-decoration: underline;}
 #footer-container{position: relative;top: 163px;background-color: #EDF2BB;min-height: 200px;}
+.redes{background-image: url("/static/img/redes.png");width: 31px; height: 30px;display: inline-block;}
+#facebook{background-position: 0 0;margin-left: 5px;}
+#twitter{background-position: -31px 0;margin-left: 25px;}
+.account{margin-left: 25px;background-image: url("/static/img/perfil.png");
+width: 147px;height: 27px;background-repeat: no-repeat;}
+.account span{font-size: 13px;color: white;margin-right: 25px;margin-top: 3px;
+float: right;}
+#menu-account{display: none;
+position: absolute;
+top: 17px;
+right: 88px;}
 /*---------------</LAYOUT>---------------*/
 
 #landing-img{

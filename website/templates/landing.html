@@ -22,7 +22,9 @@
 		<div class="btn-close">
 		</div>
 	</a>
-	<img src="{{STATIC_PREFIX}}img/landing/sing-up.png">
+	<a href="/login">
+		<img src="{{STATIC_PREFIX}}img/landing/sing-up.png" width="380">
+	</a>
 </div>
 {% endblock%}
 {%block js%}
@@ -48,9 +50,11 @@
 	});
 	function login (e) {
 		e.preventDefault();
-		console.log("hola");
-		var login = ""
+		{%if user.is_authenticated%}
+        $("#menu-account").toggle();
+        {%else%}
 		$("#sing-up").show();
+        {%endif%}
 	}
 	function close_sing_up (e) {
 		e.preventDefault();
@@ -83,7 +87,8 @@
 	#search{border: none; border-radius: 5px; padding: 10px; width: 94%;}
 	#frase-home{width: 240px;margin: 0 auto; margin-bottom: 10px}
 	#icons-bar{width: 235px;margin: 0px auto;}
-	#sing-up{position: absolute;top: 86px;width: 312px;height: 319px;left: 0;right: 0;margin: auto;display: none;}
-	.btn-close{position: relative;top: 20px;right: -283px;width: 20px;height:10px;}
+	#sing-up{position: absolute;top: 86px;width: 380px;height: 319px;left: 0;right: 0;margin: auto;display: none;}
+	.btn-close{position: relative;top: 24px;right: -315px;width: 50px;height:19px;}
+	.btn-close:hover{background-color: rgba(120,120,120,0.1);border-radius: 5px;}
 </style>
 {% endblock%}
