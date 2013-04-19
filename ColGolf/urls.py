@@ -8,7 +8,13 @@ urlpatterns = patterns(
     '',
     # Examples:
     url(r'^$', 'website.views.home', name='home'),
-    url(r'^accounts/profile/$', 'website.views.home', name='home'),
+    url(r'^accounts/profile/$', 'website.views.home', name='another home'),
+    url(r'^city/flora$', 'website.views.fauna', name='flora'),
+    url(r'^city/fauna$', 'website.views.flora', name='fauna'),
+    url(r'^city$', 'website.views.city', name='city'),
+    url(r'^campo$', 'website.views.campo', name='campo'),
+    url(r'^club$', 'website.views.club', name='club'),
+    url(r'^region$', 'website.views.region', name='region'),
     # url(r'^ColGolf/', include('ColGolf.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
