@@ -2,7 +2,7 @@
 ## Eclipse
 #################
 *.pyc
-Daiech_com/settings.py
+ColGolf/settings.py
 .settings/
 *.pydevproject
 .project

@@ -96,7 +96,7 @@ textarea {
 
 /*---------------<LAYOUT>---------------*/
 *{margin:0;padding:0;}
-body{font-size: 1em;height:100%;background-image: url("/static/img/landing/gray-jean.png");}
+body{font-size: 1em;height:100%;background-image: url("/static/img/gray-jean.png");}
 a {color: #00aeaa;text-decoration: none;}
 .b{border: solid thin #dadada;}
 .bt{border-top: solid thin #dadada;}
@@ -105,22 +105,22 @@ a {color: #00aeaa;text-decoration: none;}
 .bl{border-left: solid thin #dadada;}
 
 header{width: 915px;margin: 0 auto;
-    position: absolute;left: 0;right: 0}
-header #logo-header{
-    position: relative;
+    position: absolute;left: 0;right: 0;top: 0;}
+#logo-header{
+    position: absolute;
     left: -43px;
-    background-image: url("/static/img/landing/logo.png");
+    background-image: url("/static/img/logo.png");
     background-repeat: no-repeat;width: 129px;height: 203px;}
 header #nav-bar{width: 70%;position: absolute;right: 0;top: 10px;height: 45px;}
-header #nav-bar > div{display: inline;margin-left: 25px;float: right;}
-#follow-buttons{margin-right: 30px;}
+header #nav-bar > a > div{display: inline;margin-left: 25px;float: right;}
+#follow-buttons{margin-right: 30px;float: right;}
 #follow-buttons > div{margin-left: 0;display: inline;}
 #twitter-follow{position: relative;top: 3px;margin-left: 0;}
 header h1, header p{display: none;}
 #body-container{min-height: 200px;}
 footer{text-align: center;width: 100%;
 height:173px;
-background-image: url("/static/img/landing/footer.png");
+background-image: url("/static/img/footer.png");
 background-repeat: no-repeat;
 background-position: top center;
 }

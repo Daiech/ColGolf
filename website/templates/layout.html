@@ -32,12 +32,18 @@
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
         <header class="">
-            <h1>ColGolf,</h1>
+            <h1>ColGolf</h1>
             <p>Gu&iacute; de Golf Colombia</p>
-            <div id="logo-header"></div>
+            <a href="/">
+                <div id="logo-header"></div>
+            </a>
             <div id="nav-bar" class="">
-                <div><img src="{{STATIC_PREFIX}}img/landing/redes.png"> </div>
-                <div><img src="{{STATIC_PREFIX}}img/landing/perfil.png"> </div>
+                <a href="#social">
+                    <div><img src="{{STATIC_PREFIX}}img/redes.png"></div>
+                </a>
+                <a href="#account">
+                    <div><img src="{{STATIC_PREFIX}}img/perfil.png"></div>
+                </a>
                 <div id="follow-buttons">
                     <div class="fb-like" data-href="http://www.facebook.com/ColGolf" data-send="false" data-layout="button_count" data-width="250" data-show-faces="false"></div>
                     <div id="twitter-follow">

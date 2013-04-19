@@ -17,28 +17,48 @@
 </div>
 <section id="search-results" style="display:none"></section>
 <section id="video-news"></section>
+<div id="sing-up">
+	<a href="#close-sing-up">
+		<div class="btn-close">
+		</div>
+	</a>
+	<img src="{{STATIC_PREFIX}}img/landing/sing-up.png">
+</div>
 {% endblock%}
 {%block js%}
 <script type="text/javascript">
+	var cad = "Pereira";
+	var i = 0;
 	$(document).ready(function () {
-		var i = 0;
-		var cad = "Pereira";
 		$("#search").on("submit", function (e){e.preventDefault();})
 		$("#search").on("keydown", function (e){e.preventDefault();});
 		$("#search").on("keyup", function (e){
 			if (e.keyCode != 13){
-				i++;
+				if (e.keyCode != 8){i++;}
+				else{i--;}
 				$("#search").val("").val(cad.substr(0,i));
 			}
 			else{
-				// e.preventDefault();
-				console.log("enter");
 				showResults();
 				return false;
 			}
 		});
+		$("a[href='#account']").on("click", login);
+		$("a[href='#close-sing-up']").on("click", close_sing_up);
 	});
+	function login (e) {
+		e.preventDefault();
+		console.log("hola");
+		var login = ""
+		$("#sing-up").show();
+	}
+	function close_sing_up (e) {
+		e.preventDefault();
+		$("#sing-up").hide();
+	}
 	function showResults () {
+		$("#search").val(cad);
+		i = 7;
 		$("#search-box").animate(
 			{
 				top: "106px"
@@ -63,5 +83,7 @@
 	#search{border: none; border-radius: 5px; padding: 10px; width: 94%;}
 	#frase-home{width: 240px;margin: 0 auto; margin-bottom: 10px}
 	#icons-bar{width: 235px;margin: 0px auto;}
+	#sing-up{position: absolute;top: 86px;width: 312px;height: 319px;left: 0;right: 0;margin: auto;display: none;}
+	.btn-close{position: relative;top: 20px;right: -283px;width: 20px;height:10px;}
 </style>
 {% endblock%}
