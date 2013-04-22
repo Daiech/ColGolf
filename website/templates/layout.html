@@ -49,7 +49,7 @@
                         <div class="account">
                             <span class="">
                                 {%if user.is_authenticated%}
-                                {{user.username}}
+                                {{user.first_name}}
                                 {%else%}
                                 Inicia sesi&oacute;n
                                 {%endif%}
@@ -66,12 +66,12 @@
                         </div>
                     </a>
                 <!-- </div> -->
-                <div id="follow-buttons">
+               <!--  <div id="follow-buttons">
                     <div class="fb-like" data-href="http://www.facebook.com/ColGolf" data-send="false" data-layout="button_count" data-width="250" data-show-faces="false"></div>
                     <div id="twitter-follow">
                         <a href="https://twitter.com/ColGolf" class="twitter-follow-button" data-show-count="false" data-lang="es">Seguir a @ColGolf</a>
                     </div>
-                </div>
+                </div> -->
             </div>
         </header>
         <div id="body-container" class="">

@@ -106,11 +106,7 @@ a {color: #00aeaa;text-decoration: none;}
 
 header{width: 915px;margin: 0 auto;
     position: absolute;left: 0;right: 0;top: 0;}
-#logo-header{
-    position: absolute;
-    left: -43px;
-    background-image: url("/static/img/logo.png");
-    background-repeat: no-repeat;width: 129px;height: 203px;}
+
 header #nav-bar{width: 70%;position: absolute;right: 0;top: 10px;height: 45px;}
 header #nav-bar > a > div{display: inline;float: right;}
 #follow-buttons{margin-right: 30px;float: right;}
@@ -162,7 +158,7 @@ right: 88px;}
     background-repeat: no-repeat;
     background-position: top center;
     height: 257px;}
-
+#volver{width: 125px;height: 200px;display: inline-block;}
 
 
 

@@ -2,6 +2,9 @@
 {% block TITLE %}Inicio{% endblock %}
 {%block body%}
 <div class="city">
+	<a href="/"><div id="volver"></div></a>
+	<a href="/city/fauna" class="alink"><div class="link link-fauna"></div></a><br>
+	<a href="/city/flora" class="alink"><div class="link link-flora"></div></a>
 </div>
 {% endblock%}
 {%block js%}
@@ -19,5 +22,8 @@
 	    height: 636px;
 	    margin: 0 auto;margin-left: 132px;
 	}
+	.link{display: block;width: 90px;height: 90px;position: relative;top: 250px;right: -7px;float: right;}
+	.link:hover{border-left: solid thin rgba(100,100,100,0.1);}
+	.link-flora{top: 137px}
 </style>
 {% endblock%}

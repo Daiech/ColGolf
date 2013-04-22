@@ -9,8 +9,8 @@ urlpatterns = patterns(
     # Examples:
     url(r'^$', 'website.views.home', name='home'),
     url(r'^accounts/profile/$', 'website.views.home', name='another home'),
-    url(r'^city/flora$', 'website.views.fauna', name='flora'),
-    url(r'^city/fauna$', 'website.views.flora', name='fauna'),
+    url(r'^city/fauna$', 'website.views.fauna', name='fauna'),
+    url(r'^city/flora$', 'website.views.flora', name='flora'),
     url(r'^city$', 'website.views.city', name='city'),
     url(r'^campo$', 'website.views.campo', name='campo'),
     url(r'^club$', 'website.views.club', name='club'),

@@ -11,7 +11,10 @@
 			<input type="text" id="search" placeholder="Zona/Ciudad/Club/Campo de Golf" autofocus>
 		</form>
 		<div id="icons-bar">
-			<img src="{{STATIC_PREFIX}}img/landing/icons-bar.png">
+			<a href="/region"><div class="icon-bar icon-zone"></div></a>
+			<a href="/city"><div class="icon-bar icon-city"></div></a>
+			<a href="/club"><div class="icon-bar icon-club"></div></a>
+			<a href="/campo"><div class="icon-bar icon-camp"></div></a>
 		</div>
 	</div>
 </div>
@@ -85,10 +88,20 @@
 {% endblock%}
 {%block style%}
 <style type="text/css">
+#logo-header{
+    position: absolute;
+    left: -43px;
+    background-image: url("/static/img/logo.png");
+    background-repeat: no-repeat;width: 129px;height: 203px;}
 	#search-box{position: relative;top: 206px;left: 0;right: 0;margin: 0 auto;width: 300px;}
 	#search{border: none; border-radius: 5px; padding: 10px; width: 94%;}
 	#frase-home{width: 240px;margin: 0 auto; margin-bottom: 10px}
-	#icons-bar{width: 235px;margin: 0px auto;}
+	#icons-bar{width: 245px;margin: 0px auto;}
+	.icon-bar{background-image: url("{{STATIC_PREFIX}}img/landing/icons-bar.png");width: 58px;height: 70px;display: inline-block;}
+	.icon-zone{background-position: -4px 0}
+	.icon-city{background-position: -59px 0}
+	.icon-club{background-position: -116px 0}
+	.icon-camp{background-position: -174px 0;margin-left: -1px;}
 	#sing-up{position: absolute;top: 86px;width: 380px;height: 319px;left: 0;right: 0;margin: auto;display: none;}
 	.btn-close{position: relative;top: 24px;right: -315px;width: 50px;height:19px;}
 	.btn-close:hover{background-color: rgba(120,120,120,0.1);border-radius: 5px;}
