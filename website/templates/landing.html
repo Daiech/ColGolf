@@ -48,16 +48,15 @@
 				return false;
 			}
 		});
-		$("a[href='#account']").on("click", login);
+		{%if not user.is_authenticated%}
+		$("a[href='#account']").on("click", singUp);
+		{%endif%}
 		$("a[href='#close-sing-up']").on("click", close_sing_up);
 	});
-	function login (e) {
+	function singUp (e) {
 		e.preventDefault();
-		{%if user.is_authenticated%}
-        $("#menu-account").toggle();
-        {%else%}
 		$("#sing-up").show();
-        {%endif%}
+		$("#menu-account").hide();
 	}
 	function close_sing_up (e) {
 		e.preventDefault();

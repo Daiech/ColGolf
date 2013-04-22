@@ -24,11 +24,11 @@
 // Place any jQuery/helper plugins in here.
 
     $(document).ready(function () {
-        $("a[href='#account']").on("click", login);
+        $("a[href='#account']").on("click", menuAccount);
     });
 
 
-    function login (e) {
+    function menuAccount (e) {
         e.preventDefault();
         $("#menu-account").toggle();
     }
